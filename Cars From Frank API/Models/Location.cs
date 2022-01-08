@@ -6,6 +6,7 @@ namespace Cars_From_Frank_API.Models
     {
         [BsonElement("lat")]
         public double Latitude { get; set; }
+
         [BsonElement("long")]
         public double Longitude { get; set; }
     }

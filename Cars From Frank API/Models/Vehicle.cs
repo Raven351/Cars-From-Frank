@@ -26,6 +26,5 @@ namespace Cars_From_Frank_API.Models
 
         [BsonElement("date_added")]
         public DateOnly DateAdded { get; set; }
-
     }
 }
