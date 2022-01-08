@@ -13,6 +13,6 @@ namespace Cars_From_Frank_API.Models
         [BsonElement("location")]
         public Location WarehouseLocation { get; set; }
         [BsonElement("cars")]
-        public List<Car> CarsInWarehouse { get; set; }
+        public Cars CarsInWarehouse { get; set; }
     }
 }
