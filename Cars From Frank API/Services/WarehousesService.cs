@@ -21,6 +21,6 @@ namespace Cars_From_Frank_API.Services
             await _warehousesCollection.Find(_ => true).ToListAsync();
 
         public async Task<Warehouse?> GetAsync(string id) =>
-            await _warehousesCollection.Find(id).FirstOrDefaultAsync();
+            await _warehousesCollection.Find(warehouse => warehouse.Id == id).FirstOrDefaultAsync();
     }
 }

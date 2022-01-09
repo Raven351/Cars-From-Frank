@@ -5,9 +5,8 @@ namespace Cars_From_Frank_API.Models
     public class Warehouse
     {
         [BsonId]
-        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         [BsonElement("_id")]
-        public int? Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("name")]
         public string Name { get; set; }

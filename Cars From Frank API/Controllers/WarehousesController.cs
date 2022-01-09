@@ -17,7 +17,7 @@ namespace Cars_From_Frank_API.Controllers
         public async Task<List<Warehouse>> Get() =>
             await _warehousesService.GetAsync();
 
-        [HttpGet("{id:length(16)}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Warehouse>> Get(string id)
         {
             var warehouse = await _warehousesService.GetAsync(id);

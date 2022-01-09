@@ -5,7 +5,6 @@ namespace Cars_From_Frank_API.Models
     public class Vehicle
     {
         [BsonId]
-        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         [BsonElement("_id")]
         public int Id { get; set; }
 
@@ -25,6 +24,6 @@ namespace Cars_From_Frank_API.Models
         public bool IsLicensed { get; set; }
 
         [BsonElement("date_added")]
-        public DateOnly DateAdded { get; set; }
+        public DateTime DateAdded { get; set; }
     }
 }
