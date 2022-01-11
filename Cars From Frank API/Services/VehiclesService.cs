@@ -14,7 +14,7 @@ namespace Cars_From_Frank_API.Services
             _warehousesCollection = this._mongoDatabase.GetCollection<Warehouse>(carsFromFrankDatabaseOptions.Value.CollectionName);
         }
 
-        public async Task<List<Vehicle>> GetAsync(string order)
+        public async Task<List<Vehicle>> GetAsync(string? order)
         {
             var warehouses = await _warehousesCollection.Find(_ => true).ToListAsync();
             List<Vehicle> vehicles = new();
@@ -29,6 +29,28 @@ namespace Cars_From_Frank_API.Services
             else vehicles = vehicles.OrderByDescending(vehicle => vehicle.DateAdded).ToList();
 
             return vehicles;
+        }
+
+        public async Task<VehicleFullData?> GetAsyncById (string id)
+        {
+            var warehouses = await _warehousesCollection.Find(_ => true).ToListAsync();
+
+            foreach(var warehouse in warehouses)
+            {
+                var vehicle = warehouse.CarsInWarehouse.Vehicles.Find(vehicle => vehicle.Id == Int32.Parse(id));
+
+                if (vehicle != null)
+                {
+                    VehicleFullData vehicleFullData = new(vehicle)
+                    {
+                        GarageName = warehouse.Name,
+                        Location = warehouse.WarehouseLocation,
+                        CarsLocation = warehouse.CarsInWarehouse.Location
+                    };
+                    return vehicleFullData;
+                }
+            }
+            return null;
         }
     }
 }

@@ -22,12 +22,7 @@ namespace Cars_From_Frank_API.Controllers
         {
             var warehouse = await _warehousesService.GetAsync(id);
 
-            if (warehouse is null)
-            {
-                return NotFound();
-            }
-
-            return warehouse;
+            return warehouse is null ? NotFound() : (ActionResult<Warehouse>)warehouse;
         }
     }
 }
