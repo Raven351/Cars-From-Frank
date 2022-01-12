@@ -2,6 +2,9 @@
 
 namespace Cars_From_Frank_API.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Vehicle
     {
         [BsonId]

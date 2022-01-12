@@ -2,6 +2,9 @@
 
 namespace Cars_From_Frank_API.Models
 {
+    /// <summary>
+    /// Warehouse model. Top model in database.
+    /// </summary>
     public class Warehouse
     {
         [BsonId]

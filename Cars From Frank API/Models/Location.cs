@@ -2,6 +2,9 @@
 
 namespace Cars_From_Frank_API.Models
 {
+    /// <summary>
+    /// Location model
+    /// </summary>
     public class Location
     {
         [BsonElement("lat")]

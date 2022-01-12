@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cars_From_Frank_API.Controllers
 {
+    /// <summary>
+    /// Warehouses controller class
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class WarehousesController : ControllerBase

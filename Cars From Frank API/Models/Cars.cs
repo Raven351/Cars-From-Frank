@@ -2,6 +2,9 @@
 
 namespace Cars_From_Frank_API.Models
 {
+    /// <summary>
+    /// Model for "cars in warehouse"
+    /// </summary>
     public class Cars
     {
         [BsonElement("location")]

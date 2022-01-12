@@ -2,6 +2,9 @@
 
 namespace Cars_From_Frank_API.Models
 {
+    /// <summary>
+    /// Vehicle class expanded with addtional data found in parent paths in json
+    /// </summary>
     public class VehicleFullData : Vehicle
     {
         [BsonElement("garage_name")]

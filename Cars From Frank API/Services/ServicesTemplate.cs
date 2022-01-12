@@ -4,6 +4,9 @@ using MongoDB.Driver;
 
 namespace Cars_From_Frank_API.Services
 {
+    /// <summary>
+    /// Template for services classes.
+    /// </summary>
     public abstract class ServicesTemplate
     {
         internal readonly IOptions<CarsFromFrankDatabaseSettings> _carsFromFrankDatabaseOptions;
