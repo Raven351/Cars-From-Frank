@@ -14,7 +14,7 @@ namespace Cars_From_Frank_API.Controllers
             this._vehiclesService = vehiclesService;
 
         [HttpGet]
-        public async Task<List<Vehicle>> GetAllByOrder([FromQuery] string order = "asc") => await _vehiclesService.GetAsync(order);
+        public async Task<List<Vehicle>> GetAllByOrder([FromQuery] string? order = "asc") => await _vehiclesService.GetAsync(order);
 
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleFullData>> GetById(string id)
