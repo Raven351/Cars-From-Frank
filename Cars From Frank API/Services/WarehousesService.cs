@@ -17,6 +17,11 @@ namespace Cars_From_Frank_API.Services
             _warehousesCollection = mongoDatabase.GetCollection<Warehouse>(carsFromFrankDatabaseOptions.Value.CollectionName);
         }
 
+        public WarehousesService (IMongoCollection<Warehouse> warehousesCollection)
+        {
+            this._warehousesCollection= warehousesCollection;
+        }
+
         public async Task<List<Warehouse>> GetAsync() =>
             await _warehousesCollection.Find(_ => true).ToListAsync();
 
