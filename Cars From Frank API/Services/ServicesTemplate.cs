@@ -10,6 +10,10 @@ namespace Cars_From_Frank_API.Services
 
         internal readonly IMongoDatabase _mongoDatabase;
 
+        protected ServicesTemplate()
+        {
+        }
+
         public ServicesTemplate(IOptions<CarsFromFrankDatabaseSettings> carsFromFrankDatabaseOptions)
         {
             this._carsFromFrankDatabaseOptions = carsFromFrankDatabaseOptions;
