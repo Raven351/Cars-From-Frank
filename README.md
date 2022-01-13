@@ -10,4 +10,5 @@ This project uses MongoDB as database provider.
 2. Open the file `appsetings.json` fron inside the project and provide `ConnectiongString`, `DatabaseName and `CollectionName` for MongoDB.
 3. Build project
 4. Launch project either using Docker container or IIS container.
-5. Project should be up and running. Go to [frontend app](https://github.com/Raven351/Cars-From-Frank-Frontend) and launch frontend side.
+5. During launch, project might want to create self-signed certificate. If so, allow it and confirm.
+6. Project should be up and running. Go to [frontend app](https://github.com/Raven351/Cars-From-Frank-Frontend) and launch frontend side.
